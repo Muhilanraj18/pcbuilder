@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "source": "computer_prices_all.csv",
+    "description": "Complete PC Component Reference Database",
+    "last_updated": "2025-04-03",
+    "total_entries": 100
+  },
+  "component_categories": {
+    "processors": {
+      "intel": {
+        "i3": {
+          "models": ["i3-13251", "i3-14339", "i3-14697", "i3-14472"],
+          "tier_range": [1, 2],
+          "core_range": [4, 8],
+          "thread_range": [8, 16],
+          "price_range": { "min": 980, "max": 1410 },
+          "common_specs": {
+            "base_ghz": [2.0, 2.4],
+            "boost_ghz": [2.8, 3.4]
+          }
+        },
+        "i5": {
+          "models": ["i5-10622", "i5-11126", "i5-12912", "i5-13209", "i5-14935"],
+          "tier_range": [2, 3],
+          "core_range": [8, 12],
+          "thread_range": [16, 22],
+          "price_range": { "min": 1123, "max": 1503 },
+          "common_specs": {
+            "base_ghz": [2.6, 2.8],
+            "boost_ghz": [3.5, 3.8]
+          }
+        },
+        "i7": {
+          "models": ["i7-10369", "i7-11194", "i7-12337", "i7-12360", "i7-12518", "i7-11751"],
+          "tier_range": [4, 5],
+          "core_range": [12, 18],
+          "thread_range": [24, 36],
+          "price_range": { "min": 1507, "max": 2560 },
+          "common_specs": {
+            "base_ghz": [2.8, 3.0],
+            "boost_ghz": [3.7, 4.0]
+          }
+        },
+        "i9": {
+          "models": ["i9-14473", "i9-14792"],
+          "tier_range": [6],
+          "core_range": [26],
+          "thread_range": [52],
+          "price_range": { "min": 2953, "max": 3039 },
+          "common_specs": {
+            "base_ghz": [3.0],
+            "boost_ghz": [4.0, 4.1]
+          }
+        }
+      },
+      "amd": {
+        "ryzen3": {
+          "models": ["Ryzen 3 4374"],
+          "tier_range": [1],
+          "core_range": [4],
+          "thread_range": [8],
+          "price_range": { "min": 1653, "max": 1653 },
+          "common_specs": {
+            "base_ghz": [2.0],
+            "boost_ghz": [2.9]
+          }
+        },
+        "ryzen5": {
+          "models": ["Ryzen 5 5168", "Ryzen 5 5795", "Ryzen 5 6942", "Ryzen 5 7218", "Ryzen 5 7550"],
+          "tier_range": [2, 3],
+          "core_range": [6, 8],
+          "thread_range": [10, 16],
+          "price_range": { "min": 1251, "max": 1879 },
+          "common_specs": {
+            "base_ghz": [2.6],
+            "boost_ghz": [3.4, 3.7]
+          }
+        },
+        "ryzen7": {
+          "models": ["Ryzen 7 5167", "Ryzen 7 5249", "Ryzen 7 5904", "Ryzen 7 6230", "Ryzen 7 7128", "Ryzen 7 7165", "Ryzen 7 7338", "Ryzen 7 7753"],
+          "tier_range": [4, 5],
+          "core_range": [12, 18],
+          "thread_range": [24, 36],
+          "price_range": { "min": 1641, "max": 2681 },
+          "common_specs": {
+            "base_ghz": [2.6, 3.0],
+            "boost_ghz": [3.4, 3.9]
+          }
+        },
+        "ryzen9": {
+          "models": ["Ryzen 9 3455"],
+          "tier_range": [6],
+          "core_range": [24],
+          "thread_range": [48],
+          "price_range": { "min": 3173, "max": 3173 },
+          "common_specs": {
+            "base_ghz": [3.0],
+            "boost_ghz": [3.8]
+          }
+        }
+      },
+      "apple": {
+        "m1": {
+          "models": ["M1 Pro", "M1 Max"],
+          "tier_range": [5, 6],
+          "core_range": [8, 16],
+          "thread_range": [16, 26],
+          "price_range": { "min": 2530, "max": 3546 },
+          "common_specs": {
+            "base_ghz": [3.0],
+            "boost_ghz": [3.8, 4.1]
+          }
+        },
+        "m2": {
+          "models": ["M2", "M2 Pro"],
+          "tier_range": [2, 3],
+          "core_range": [6, 8],
+          "thread_range": [6, 8],
+          "price_range": { "min": 1609, "max": 2139 },
+          "common_specs": {
+            "base_ghz": [2.6, 2.8],
+            "boost_ghz": [3.5, 3.7]
+          }
+        },
+        "m3": {
+          "models": ["M3 Pro"],
+          "tier_range": [5],
+          "core_range": [18],
+          "thread_range": [18],
+          "price_range": { "min": 3421, "max": 3421 },
+          "common_specs": {
+            "base_ghz": [2.8],
+            "boost_ghz": [3.6]
+          }
+        }
+      }
+    },
+    "graphics_cards": {
+      "nvidia_rtx30_series": {
+        "models": ["RTX 30 50", "RTX 30 60", "RTX 30 70", "RTX 30 80", "RTX 30 80 Ti", "RTX 30 90"],
+        "vram_options": [4, 6, 8, 10, 12, 16],
+        "tier_range": [1, 6],
+        "price_range": { "min": 1123, "max": 3001 }
+      },
+      "nvidia_rtx40_series": {
+        "models": ["RTX 40 50", "RTX 40 60", "RTX 40 70", "RTX 40 80", "RTX 40 80 Ti", "RTX 40 90"],
+        "vram_options": [6, 8, 10, 12, 16],
+        "tier_range": [1, 6],
+        "price_range": { "min": 980, "max": 3039 }
+      },
+      "amd_rx5000_series": {
+        "models": ["RX 5000 50", "RX 5000 90"],
+        "vram_options": [4, 16],
+        "tier_range": [1, 6],
+        "price_range": { "min": 980, "max": 3173 }
+      },
+      "amd_rx6000_series": {
+        "models": ["RX 6000 80"],
+        "vram_options": [10],
+        "tier_range": [4],
+        "price_range": { "min": 2761, "max": 2761 }
+      },
+      "amd_rx7000_series": {
+        "models": ["RX 7000 60", "RX 7000 80", "RX 7000 80 XT"],
+        "vram_options": [6, 12],
+        "tier_range": [2, 5],
+        "price_range": { "min": 1331, "max": 2560 }
+      },
+      "apple_integrated": {
+        "models": ["Apple Integrated"],
+        "vram_options": [0, 4, 6],
+        "tier_range": [1, 6],
+        "price_range": { "min": 1609, "max": 3546 }
+      }
+    },
+    "memory": {
+      "ddr_variants": {
+        "8GB": {
+          "price_range": { "min": 1123, "max": 1653 },
+          "common_in": ["Gaming", "Ultrabook"]
+        },
+        "16GB": {
+          "price_range": { "min": 1274, "max": 1947 },
+          "common_in": ["Mainstream", "Creator"]
+        },
+        "32GB": {
+          "price_range": { "min": 1525, "max": 2109 },
+          "common_in": ["Gaming", "Workstation"]
+        },
+        "64GB": {
+          "price_range": { "min": 1331, "max": 2678 },
+          "common_in": ["Creator", "Workstation"]
+        },
+        "96GB": {
+          "price_range": { "min": 2045, "max": 3002 },
+          "common_in": ["Creator", "Workstation"]
+        },
+        "104GB": {
+          "price_range": { "min": 3002, "max": 3002 },
+          "common_in": ["Premium Creator"]
+        },
+        "128GB": {
+          "price_range": { "min": 2953, "max": 3173 },
+          "common_in": ["Premium Creator", "Workstation"]
+        },
+        "144GB": {
+          "price_range": { "min": 3546, "max": 3546 },
+          "common_in": ["Premium Workstation"]
+        }
+      }
+    },
+    "storage": {
+      "SSD": {
+        "capacities": [256, 512, 1024, 2048],
+        "price_per_gb": 2.0,
+        "speed": "500-700 MB/s"
+      },
+      "NVMe": {
+        "capacities": [256, 512, 1024, 2048],
+        "price_per_gb": 3.5,
+        "speed": "2000-3500 MB/s"
+      },
+      "HDD": {
+        "capacities": [512, 1024],
+        "price_per_gb": 1.5,
+        "speed": "150-200 MB/s"
+      },
+      "Hybrid": {
+        "capacities": [1024, 2048],
+        "price_per_gb": 2.5,
+        "speed": "Combined"
+      }
+    },
+    "displays": {
+      "resolutions": {
+        "1920x1080": {
+          "label": "Full HD (1080p)",
+          "sizes": [13.3, 15.6, 17.3, 24, 27, 32],
+          "refresh_rates": [60, 90, 120, 144, 165, 240],
+          "typical_price": 1200
+        },
+        "2560x1440": {
+          "label": "QHD (1440p)",
+          "sizes": [15.6, 16, 27, 32, 34],
+          "refresh_rates": [60, 90, 120, 144, 165],
+          "typical_price": 2000
+        },
+        "2560x1600": {
+          "label": "WQHD",
+          "sizes": [14, 15.6, 16],
+          "refresh_rates": [60, 90, 120, 240],
+          "typical_price": 2500
+        },
+        "3440x1440": {
+          "label": "Ultrawide",
+          "sizes": [32, 34],
+          "refresh_rates": [60, 120],
+          "typical_price": 2200
+        },
+        "3840x2160": {
+          "label": "4K Ultra HD",
+          "sizes": [14, 15.6, 17.3, 24, 32],
+          "refresh_rates": [60, 90, 240],
+          "typical_price": 3150
+        },
+        "2880x1800": {
+          "label": "3K Retina",
+          "sizes": [15.6, 16],
+          "refresh_rates": [60],
+          "typical_price": 1950
+        }
+      }
+    },
+    "brands": {
+      "laptop_brands": ["Apple", "ASUS", "Acer", "Dell", "HP", "Lenovo", "MSI", "Samsung"],
+      "desktop_brands": ["ASUS", "Acer", "Apple", "Dell", "HP", "Lenovo", "MSI", "Samsung"],
+      "cpu_brands": ["Intel", "AMD", "Apple"],
+      "gpu_brands": ["NVIDIA", "AMD", "Apple"]
+    },
+    "form_factors": {
+      "desktop": ["Full-Tower", "ATX", "Micro-ATX", "Mini-ITX", "SFF"],
+      "laptop": ["2-in-1", "Gaming", "Mainstream", "Ultrabook"]
+    }
+  },
+  "price_ranges": {
+    "budget": { "min": 980, "max": 1500, "label": "Budget" },
+    "mid_range": { "min": 1500, "max": 2500, "label": "Mid-Range" },
+    "premium": { "min": 2500, "max": 3500, "label": "Premium" },
+    "ultra_premium": { "min": 3500, "max": 5000, "label": "Ultra Premium" }
+  },
+  "recommendations": {
+    "gaming_laptops": {
+      "budget": "RTX 30 60 + Ryzen 5 + 16GB RAM",
+      "mid": "RTX 30 80 + i7/Ryzen 7 + 32GB RAM",
+      "high": "RTX 40 80 + i9/Ryzen 9 + 64GB RAM"
+    },
+    "workstations": {
+      "content_creation": "RTX 40 90 + Intel i9/AMD Ryzen 9 + 96-128GB RAM",
+      "3d_rendering": "RTX 30 90 Ti + Intel Xeon equivalent + 128GB RAM",
+      "video_editing": "RTX 40 80 + i7/Ryzen 7 + 64GB RAM"
+    },
+    "office_work": {
+      "budget": "Intel i3/AMD Ryzen 3 + 8GB RAM + SSD",
+      "comfortable": "Intel i5/AMD Ryzen 5 + 16GB RAM + NVMe"
+    }
+  }
+}

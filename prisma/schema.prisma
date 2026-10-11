@@ -1,0 +1,43 @@
+// PC Builder India — Prisma Schema
+// Supabase Postgres (direct connection, port 5432)
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id               String         @id @default(cuid())
+  name             String         @unique
+  category         String         // "Processor" | "Graphics Card" | "Motherboard" | "RAM" | "Storage" | "Power Supply" | "Cabinet" | "Keyboard" | "Mouse" | "Cooling" | "Monitor"
+  tier             String?        // "budget" | "midRange" | "highEnd" | "enthusiast" | "ddr4" | "ddr5" | "ssd" | "nvme" | "hdd" | null
+  brand            String
+  specs            Json           @default("{}")
+  currentPrice     Int
+  imageUrl         String         @default("")
+  amazonUrl        String?
+  flipkartUrl      String?
+  mdcomputersUrl   String?
+  isVerified       Boolean        @default(false)
+  inStock          Boolean        @default(true)
+  // "volatile" = checked every sync run (GPUs, CPUs); "standard" = checked every 3rd run
+  refreshTier      String         @default("standard")
+  lastPriceCheckAt DateTime       @default(now())
+  lastPriceValue   Int?           // previous price before last update (for delta detection)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  priceHistory     PriceHistory[]
+}
+
+model PriceHistory {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  price     Int
+  checkedAt DateTime @default(now())
+  source    String   // "pa-api" | "serpapi" | "manual"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "pc-builder-india",
+  "version": "1.0.0",
+  "description": "Clean, premium PC Builder & Upgrade web app for Indian users",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "update-prices": "tsx scripts/syncPrices.ts",
+    "update-prices:priority": "tsx scripts/syncPrices.ts --priority-only",
+    "migrate-db": "tsx scripts/migrateToDb.ts",
+    "test-catalog": "tsx scripts/testCatalog.ts",
+    "db:studio": "npx prisma studio",
+    "db:push": "npx prisma db push",
+    "serpapi:lookup": "node scripts/serpapi_price_lookup.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@react-three/drei": "^9.92.0",
+    "@react-three/fiber": "^8.15.0",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.298.0",
+    "next": "^14.0.4",
+    "prisma": "^5.22.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/three": "^0.160.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "tsx": "^4.23.0",
+    "typescript": "^5.3.3"
+  }
+}

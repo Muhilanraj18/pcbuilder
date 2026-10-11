@@ -1,0 +1,48 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Python cache (legacy backend)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Generated cache and log files
+live_prices_cache.json
+api_output.log
+
+# Price sync runtime files — contain state & credentials, never commit
+.env
+sync-run-counter.json
+needs-manual-review.json
